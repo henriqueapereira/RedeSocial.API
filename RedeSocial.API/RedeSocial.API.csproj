@@ -6,4 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RedeSocial.Application\RedeSocial.Application.csproj" />
+    <ProjectReference Include="..\RedeSocial.Infrastructure\RedeSocial.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
