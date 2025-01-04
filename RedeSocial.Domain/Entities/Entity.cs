@@ -3,7 +3,7 @@
     public abstract class Entity
     {
         public int Id { get; set; }
-        public DateTime Datacriacao { get; set; }
-        public DateTime DataAlteracao { get; set; }
+        public DateTime DataCriacao { get; set; }
+        public DateTime? DataAlteracao { get; set; }
     }
 }

@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using RedeSocial.Infrastructure.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +20,9 @@ builder.Services.AddSwaggerGen(opt =>
     });
 });
 
+// Context
+var connectionString = builder.Configuration.GetConnectionString("DBRedeSocial");
+builder.Services.AddDbContext<RedeSocialDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddControllers();
 
